@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { AuthProvider } from "./Services/Firebase/provider/AuthProvider";
+import Login from "./Scenes/Login";
+import Dashboard from "./Scenes/Dashboard";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  Redirect
+} from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  return <AuthProvider>
+      <Router>
+        <Switch>
+            <Route path="/dashboard">
+              <Dashboard/>
+            </Route>
+            <Route path="/login">
+              <Login/>
+            </Route>
+            <Route path="/">
+              <Redirect to="/login"/>
+            </Route>
+        </Switch>
+      </Router>
+  </AuthProvider>
 }
 
 export default App;

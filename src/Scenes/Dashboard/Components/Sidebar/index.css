@@ -1,0 +1,53 @@
+
+#sidebar{
+    margin-top: 1%;
+}
+
+#options{
+    margin-left: 1vw;
+}
+
+#profile{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3{
+    margin-top: 4%;
+    font-size: medium;
+}
+h4{
+    margin-top: 0.3%;
+    font-size: small;
+}
+
+hr{
+    width: 13vw;
+    margin-left: 1vw;
+}
+
+.listItem{
+    margin-top: 2vh;
+    padding-left: 1vw;
+    margin-right: 3vw;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.listItemSelected{
+    background-color: #F6F9FD;
+}
+
+.subEl{
+    margin-left: 2vw;
+}
+
+.list{
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+}
